@@ -25,7 +25,7 @@ useEffect(()=>{
     <>
       <Container>
         <Row>
-          <Col>
+          <Col xs='6'>
       <h1>Your Info</h1>
       <Card>
         <CardBody>
@@ -38,7 +38,7 @@ useEffect(()=>{
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col xs= '6'>
       <h1>Your Posts</h1>
       {
         profileState.user.posts

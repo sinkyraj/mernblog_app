@@ -50,7 +50,7 @@ return(
   <h1>Create A Post</h1>
     <Form inline onSubmit={handleCreatePost}>
         <Row>
-          <Col>
+          <Col xs="6">
       <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
         <Label htmlFor='title' className='mr-sm-2'>Title</Label>
         <Input
@@ -63,7 +63,7 @@ return(
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col xs="6">
       <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
         <Label htmlFor='body' className='mr-sm-2'>Body</Label>
         <Input
@@ -83,19 +83,25 @@ return(
         </Row>
     </Form>
     <br />
+      <Row>
+        <Col sm="6">
     {
       postState.posts.length
         ? postState.posts.map(post => (
           <Card key={post._id}>
+            
             <CardBody>
               <CardTitle tag='h5'>{post.title}</CardTitle>
               <CardSubtitle tag='h6' className='mb-2 text-muted'>posted by {post.author.username}</CardSubtitle>
               <CardText>{post.body}</CardText>
             </CardBody>
+            
           </Card>
         ))
         : null
     }
+        </Col>
+      </Row>
     </Container>
 </>
 

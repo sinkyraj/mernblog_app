@@ -51,7 +51,7 @@ const Login = () => {
       <h1>Register</h1>
       <Form inline onSubmit={handleRegister}>
           <Row>
-            <Col>
+            <Col xs="6">
         <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
           <Label htmlFor='name' className='mr-sm-2'>Name</Label>
           <Input
@@ -64,7 +64,7 @@ const Login = () => {
             </Col>
             </Row>
             <Row>
-            <Col>
+            <Col xs="6">
         <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
           <Label htmlFor='email' className='mr-sm-2'>email</Label>
           <Input
@@ -77,7 +77,7 @@ const Login = () => {
             </Col>
             </Row>
             <Row>
-            <Col>
+            <Col xs="6">
         <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
           <Label htmlFor='username' className='mr-sm-2'>Username</Label>
           <Input
@@ -90,7 +90,7 @@ const Login = () => {
             </Col>
             </Row>
             <Row>
-            <Col>
+            <Col xs="6">
         <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
           <Label htmlFor='password' className='mr-sm-2'>Password</Label>
           <Input
@@ -113,6 +113,8 @@ const Login = () => {
       <Container>
       <h1>Login</h1>
       <Form inline onSubmit={handleLogin}>
+          <Row>
+            <Col xs="6">
         <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
           <Label htmlFor='un' className='mr-sm-2'>Username</Label>
           <Input
@@ -122,6 +124,10 @@ const Login = () => {
             onChange={handleInputChange}
           />
         </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs="6">
         <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
           <Label htmlFor='pw' className='mr-sm-2'>Password</Label>
           <Input
@@ -131,6 +137,8 @@ const Login = () => {
             onChange={handleInputChange}
           />
         </FormGroup>
+            </Col>
+          </Row>
         <br/>
         <Button onClick={handleLogin}>Login</Button>
       </Form>
